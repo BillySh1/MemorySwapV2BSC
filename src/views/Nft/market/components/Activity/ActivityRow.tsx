@@ -13,7 +13,7 @@ import {
 import { NextLinkFromReactRouter } from 'components/NextLink'
 import { Activity, NftToken } from 'state/nftMarket/types'
 import { Price } from '@pancakeswap/sdk'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import ProfileCell from 'views/Nft/market/components/ProfileCell'
 import MobileModal from './MobileModal'
@@ -157,7 +157,7 @@ const ActivityRow: React.FC<ActivityRowProps> = ({
       </Td>
       {isXs || isSm ? null : (
         <Td>
-          <IconButton as={Link} external href={getEthfScanLink(activity.tx, 'transaction', chainId)}>
+          <IconButton as={Link} external href={getBNBScanLink(activity.tx, 'transaction', chainId)}>
             <OpenNewIcon color="textSubtle" width="18px" />
           </IconButton>
         </Td>

@@ -1,8 +1,8 @@
 import { TokenMarketData, Image } from 'state/nftMarket/types'
 
 export enum PaymentCurrency {
-  ETHF,
-  WETHF,
+  BNB,
+  WBNB,
 }
 
 export enum BuyingStage {

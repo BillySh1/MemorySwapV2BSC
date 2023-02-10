@@ -7,7 +7,7 @@ const ItamWarning = () => {
   return (
     <>
       <Text>
-        {t('ITAM has been rebranded as ITAM ETHF.')}{' '}
+        {t('ITAM has been rebranded as ITAM BNB.')}{' '}
         <Link style={{ display: 'inline' }} external href="https://itam.network/swap">
           {t('Please proceed to ITAM bridge to conduct a one-way swap of your ITAM tokens.')}
         </Link>{' '}

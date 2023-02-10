@@ -21,7 +21,7 @@ import { wrappedCurrency } from 'utils/wrappedCurrency'
 import { WrappedTokenInfo } from 'state/types'
 import { RowFixed } from '../Layout/Row'
 import { AutoColumn, ColumnCenter } from '../Layout/Column'
-import { getEthfScanLink } from '../../utils'
+import { getBNBScanLink } from '../../utils'
 
 const Wrapper = styled.div`
   width: 100%;
@@ -82,8 +82,8 @@ export function TransactionSubmittedContent({
         <AutoColumn gap="12px" justify="center">
           <Text fontSize="20px">{t('Transaction Submitted')}</Text>
           {chainId && hash && (
-            <Link external small href={getEthfScanLink(hash, 'transaction', chainId)}>
-              {t('View on ETHFScan')}
+            <Link external small href={getBNBScanLink(hash, 'transaction', chainId)}>
+              {t('View on BNBScan')}
             </Link>
           )}
           {currencyToAdd && library?.provider?.isMetaMask && (

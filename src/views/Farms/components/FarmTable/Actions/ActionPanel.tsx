@@ -3,7 +3,7 @@ import { useTranslation } from 'contexts/Localization'
 import { LinkExternal, Text } from '@pancakeswap/uikit'
 import getLiquidityUrlPathParts from 'utils/getLiquidityUrlPathParts'
 import { getAddress } from 'utils/addressHelpers'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import { FarmAuctionTag, CoreTag, DualTag } from 'components/Tags'
 import { FarmWithStakedValue } from '../../types'
 
@@ -148,7 +148,7 @@ const ActionPanel: React.FunctionComponent<ActionPanelProps> = ({
     tokenAddress: token.address,
   })
   const lpAddress = getAddress(farm.lpAddresses)
-  const bsc = getEthfScanLink(lpAddress, 'address')
+  const bsc = getBNBScanLink(lpAddress, 'address')
   const info = `/info/pool/${lpAddress}`
 
   return (

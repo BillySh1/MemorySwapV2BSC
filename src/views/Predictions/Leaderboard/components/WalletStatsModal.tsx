@@ -17,7 +17,7 @@ import {
 import { useProfileForAddress } from 'state/profile/hooks'
 import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import truncateHash from 'utils/truncateHash'
 import {
   useGetOrFetchLeaderboardAddressResult,
@@ -75,7 +75,7 @@ const WalletStatsModal: React.FC<WalletStatsModalProps> = ({ account, onDismiss,
                 {profile?.username}
               </Heading>
             )}
-            <ExternalLink href={getEthfScanLink(address, 'address')}>{truncateHash(address)}</ExternalLink>
+            <ExternalLink href={getBNBScanLink(address, 'address')}>{truncateHash(address)}</ExternalLink>
           </Box>
         </Flex>
         <IconButton variant="text" onClick={handleDismiss} aria-label="Close the dialog">

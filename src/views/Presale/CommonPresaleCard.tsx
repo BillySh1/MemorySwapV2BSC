@@ -18,7 +18,7 @@ import { MaxUint256 } from '@ethersproject/constants'
 import { isNumber } from 'lodash'
 import { Button, Input, Flex } from '@pancakeswap/uikit'
 import { BigNumber } from '@ethersproject/bignumber'
-import { useDonateETHF, useDonateRM } from 'hooks/useContract'
+import { useDonateBNB, useDonateRM } from 'hooks/useContract'
 
 const Content = styled.div`
   background: #ffffff;
@@ -70,9 +70,9 @@ const DonateButton = styled(Button)`
 
 export default function CommonPresaleCard(props) {
   const { type = 0 } = props
-  const tokenName = type == 0 ? 'RM' : 'ETHF'
+  const tokenName = type == 0 ? 'RM' : 'BNB'
 
-  const donateContract = type == 0 ? useDonateRM(type) : useDonateETHF(type)
+  const donateContract = type == 0 ? useDonateRM(type) : useDonateBNB(type)
   const { account } = useWeb3React()
   const { library } = useActiveWeb3React()
   const { callWithGasPrice } = useCallWithGasPrice()
@@ -80,14 +80,14 @@ export default function CommonPresaleCard(props) {
   const [buyAmount, setBuyAmount] = useState(null)
   const [isApproved, setIsApproved] = useState(false)
   const { toastSuccess, toastError } = useToast()
-  const { data: price } = useSWRContract([donateContract, type == 0 ? 'priceRM' : 'priceETHF'])
+  const { data: price } = useSWRContract([donateContract, type == 0 ? 'priceRM' : 'priceBNB'])
   const { data: raised } = useSWRContract([donateContract, 'poolInfos', [type == 0 ? 1 : 2]])
   const { data: user } = useSWRContract([donateContract, 'getInfo', [account || NOT_ON_SALE_SELLER]])
   const { data: nowPhase } = useSWRContract([donateContract, 'nowPhase'])
 
   const handleDonate = async () => {
     const receipt = await fetchWithCatchTxError(() =>
-      callWithGasPrice(donateContract, type == 0 ? 'RMDonate' : 'ETHFDonate', [buyAmount], {
+      callWithGasPrice(donateContract, type == 0 ? 'RMDonate' : 'BNBDonate', [buyAmount], {
         value: type === 1 ? BigNumber.from(buyAmount.toString()).mul(price) : undefined,
       }),
     )
@@ -130,7 +130,7 @@ export default function CommonPresaleCard(props) {
   }
   const percentage = () => {
     if (raised && price) {
-      const m1 = Number(formatEther(type == 0 ? raised.raisedRM : raised.raisedETHF))
+      const m1 = Number(formatEther(type == 0 ? raised.raisedRM : raised.raisedBNB))
       const m2 = Number(formatEther(price))
       const m3 = Number(formatEther(raised.totalFdao))
 
@@ -162,7 +162,7 @@ export default function CommonPresaleCard(props) {
         <InfoItem>
           <div>Rasied</div>
           <div style={{ textAlign: 'right' }}>
-            {raised ? Number(formatEther(type == 0 ? raised.raisedRM : raised.raisedETHF)).toFixed(2) : 0} {tokenName}{' '}
+            {raised ? Number(formatEther(type == 0 ? raised.raisedRM : raised.raisedBNB)).toFixed(2) : 0} {tokenName}{' '}
             <br />({percentage()}%)
           </div>
         </InfoItem>

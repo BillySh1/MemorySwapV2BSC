@@ -20,7 +20,7 @@ import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
 import useTheme from 'hooks/useTheme'
 
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import truncateHash from 'utils/truncateHash'
 
 type ConfirmModalProps = {
@@ -87,8 +87,8 @@ const ConfirmModal: React.FC<ConfirmModalProps> = ({
               <Text mb="30px" bold>
                 {t('Transaction Submitted')}
               </Text>
-              <LinkExternal href={getEthfScanLink(txHash, 'transaction', chainId)} mb="30px">
-                {t('View on ETHFScan')}: {truncateHash(txHash, 8, 0)}
+              <LinkExternal href={getBNBScanLink(txHash, 'transaction', chainId)} mb="30px">
+                {t('View on BNBScan')}: {truncateHash(txHash, 8, 0)}
               </LinkExternal>
               <Flex
                 justifyContent="center"

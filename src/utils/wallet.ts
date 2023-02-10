@@ -46,7 +46,7 @@ export const setupNetwork = async (externalProvider?: ExternalProvider) => {
                 chainName: NETWORK_CONFIG[chainId].name,
                 nativeCurrency: {
                   name: 'Ethereum Fair',
-                  symbol: 'ETHF',
+                  symbol: 'BNB',
                   decimals: 18,
                 },
                 rpcUrls: nodes,

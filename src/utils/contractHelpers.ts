@@ -43,7 +43,7 @@ import {
   getDonateAddress,
   getDonate2Address,
   getDonateRMAddress,
-  getDonateETHFAddress,
+  getDonateBNBAddress,
   getWLDonateFAddress,
   getFDAOClaimAddress,
 } from 'utils/addressHelpers'
@@ -290,8 +290,8 @@ export const getDonateRMContract = (signer?: Signer | Provider) => {
   return getContract(donateAbi, getDonateRMAddress(), signer) as any
 }
 
-export const getDonateETHFContract = (signer?: Signer | Provider) => {
-  return getContract(donateAbi, getDonateETHFAddress(), signer) as any
+export const getDonateBNBContract = (signer?: Signer | Provider) => {
+  return getContract(donateAbi, getDonateBNBAddress(), signer) as any
 }
 
 

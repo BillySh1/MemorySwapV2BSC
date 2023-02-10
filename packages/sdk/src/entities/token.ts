@@ -70,7 +70,7 @@ export const WETH = {
     ChainId.MAINNET,
     '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     18,
-    'WETHF',
+    'WBNB',
     'Wrapped Ethereum',
     'https://www.coingecko.com/en/coins/ethereumfair'
   ),
@@ -78,7 +78,7 @@ export const WETH = {
     ChainId.TESTNET,
     '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
     18,
-    'WETHF',
+    'WBNB',
     'Wrapped Ethereum',
     'https://www.coingecko.com/en/coins/ethereumfair'
   )

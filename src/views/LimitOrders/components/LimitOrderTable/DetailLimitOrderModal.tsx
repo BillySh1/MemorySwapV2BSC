@@ -122,7 +122,7 @@ export const DetailLimitOrderModal: React.FC<DetailLimitOrderModalProps> = ({ on
         {isOpen ? (
           <>
             <Button variant="primary" mt="16px" as="a" external href={formattedOrder.bscScanUrls.created}>
-              {t('View on ETHFScan')}
+              {t('View on BNBScan')}
             </Button>
             {!isSubmissionPending && (
               <Button variant="danger" mt="16px" onClick={onCancelOrder}>
@@ -132,17 +132,17 @@ export const DetailLimitOrderModal: React.FC<DetailLimitOrderModalProps> = ({ on
           </>
         ) : (
           <Button variant="primary" mt="16px" as="a" external href={formattedOrder.bscScanUrls.created}>
-            {t('View order creation on ETHFScan')}
+            {t('View order creation on BNBScan')}
           </Button>
         )}
         {isCancelled && bscScanUrls.cancelled && (
           <Button variant="primary" mt="16px" as="a" external href={bscScanUrls.cancelled}>
-            {t('View order cancellation on ETHFScan')}
+            {t('View order cancellation on BNBScan')}
           </Button>
         )}
         {isExecuted && bscScanUrls.executed && (
           <Button variant="primary" mt="16px" as="a" external href={bscScanUrls.executed}>
-            {t('View order execution on ETHFScan')}
+            {t('View order execution on BNBScan')}
           </Button>
         )}
       </Flex>

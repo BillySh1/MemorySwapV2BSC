@@ -3,7 +3,7 @@ import RemoveLiquidity from 'views/RemoveLiquidity'
 
 export default RemoveLiquidity
 
-const OLD_PATH_STRUCTURE = /^(0x[a-fA-F0-9]{40}|ETHF)-(0x[a-fA-F0-9]{40}|ETHF)$/
+const OLD_PATH_STRUCTURE = /^(0x[a-fA-F0-9]{40}|BNB)-(0x[a-fA-F0-9]{40}|BNB)$/
 
 // export const getStaticPaths: GetStaticPaths = () => {
 //   return {

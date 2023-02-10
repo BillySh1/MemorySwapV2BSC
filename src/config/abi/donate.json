@@ -8,12 +8,12 @@
       },
       {
         "internalType": "address",
-        "name": "u2ethf",
+        "name": "u2bnb",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "rm2ethf",
+        "name": "rm2bnb",
         "type": "address"
       }
     ],
@@ -41,7 +41,7 @@
   },
   {
     "inputs": [],
-    "name": "ETHFRaisedMultiple",
+    "name": "BNBRaisedMultiple",
     "outputs": [
       {
         "internalType": "uint256",
@@ -242,7 +242,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "raisedETHF",
+        "name": "raisedBNB",
         "type": "uint256"
       }
     ],
@@ -251,7 +251,7 @@
   },
   {
     "inputs": [],
-    "name": "priceETHF",
+    "name": "priceBNB",
     "outputs": [
       {
         "internalType": "uint256",
@@ -376,7 +376,7 @@
       },
       {
         "internalType": "uint256",
-        "name": "_ethf",
+        "name": "_bnb",
         "type": "uint256"
       }
     ],
@@ -470,7 +470,7 @@
         "type": "uint256"
       }
     ],
-    "name": "ETHFDonate",
+    "name": "BNBDonate",
     "outputs": [],
     "stateMutability": "payable",
     "type": "function"

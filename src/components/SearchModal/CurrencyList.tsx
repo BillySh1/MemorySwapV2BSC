@@ -88,7 +88,7 @@ function CurrencyRow({
       <CurrencyLogo currency={currency} size="24px" />
       <Column>
         <Text style={{ display: 'flex', alignItems: 'center' }} bold>
-          {currency.symbol} {['RM', 'ETHF', 'FDAO'].includes(currency.symbol) && <WhiteListIcon />}
+          {currency.symbol} {['RM', 'BNB', 'FDAO'].includes(currency.symbol) && <WhiteListIcon />}
         </Text>
         <Text color="textSubtle" small ellipsis maxWidth="200px">
           {!isOnSelectedList && customAdded && `${t('Added by user')} •`} {currency.name}

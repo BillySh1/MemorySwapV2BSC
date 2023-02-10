@@ -42,7 +42,7 @@ import {
   getDonateContract,
   getDonate2Contract,
   getDonateRMContract,
-  getDonateETHFContract,
+  getDonateBNBContract,
   getWLDonateContract,
   getFDAOClaimContract,
 } from 'utils/contractHelpers'
@@ -292,9 +292,9 @@ export const useDonateRM = (type)=>{
   const { library } = useActiveWeb3React()
   return useMemo(() => getDonateRMContract(library.getSigner()), [library, type])
 } 
-export const useDonateETHF = (type)=>{
+export const useDonateBNB = (type)=>{
   const { library } = useActiveWeb3React()
-  return useMemo(() => getDonateETHFContract(library.getSigner()), [library, type])
+  return useMemo(() => getDonateBNBContract(library.getSigner()), [library, type])
 } 
 
 export const useWLDonate = ()=>{

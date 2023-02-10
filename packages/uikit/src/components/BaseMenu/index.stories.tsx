@@ -72,7 +72,7 @@ export const SubMenu: React.FC = () => {
           options={{ placement: "right", offset: [0, 15], padding: { top: 20 } }}
         >
           <SubMenuItem as={LinkExternal} href="https://bscscan.com" bold={false} color="text">
-            View on ETHF Scan
+            View on BNB Scan
           </SubMenuItem>
           <SubMenuItem as={LinkExternal} href="https://pancakeswap.info" bold={false} color="text" target="blank">
             View on PCS Info
@@ -93,7 +93,7 @@ export const SubMenu: React.FC = () => {
           }
         >
           <SubMenuItem as={LinkExternal} href="https://explorer.etherfair.org" bold={false} color="text">
-            View on ETHFSCAN
+            View on BNBSCAN
           </SubMenuItem>
           <SubMenuItem as={LinkExternal} href="/" bold={false} color="text" target="blank">
             View on PCS Info

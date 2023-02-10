@@ -131,8 +131,8 @@ export const getDonate2Address = ()=>{
 export const getDonateRMAddress = ()=>{
   return getAddress(addresses.donateRM)
 }
-export const getDonateETHFAddress = ()=>{
-  return getAddress(addresses.donateETHF)
+export const getDonateBNBAddress = ()=>{
+  return getAddress(addresses.donateBNB)
 }
 
 export const getWLDonateFAddress = ()=>{

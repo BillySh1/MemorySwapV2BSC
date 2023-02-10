@@ -3,7 +3,7 @@ import useTheme from 'hooks/useTheme'
 import styled from 'styled-components'
 import { NftToken } from 'state/nftMarket/types'
 import { useTranslation } from 'contexts/Localization'
-import { getEthfScanLinkForNft } from 'utils'
+import { getBNBScanLinkForNft } from 'utils'
 import { HorizontalDivider, RoundedImage } from './BuySellModals/shared/styles'
 import EditProfileModal from '../Profile/components/EditProfileModal'
 import { nftsBaseUrl, pancakeBunniesAddress } from '../constants'
@@ -61,8 +61,8 @@ const ProfileNftModal: React.FC<ProfileNftModalProps> = ({ nft, onDismiss, onSuc
               {t('View Item')}
             </Button>
             <HorizontalDivider />
-            <LinkExternal p="0px" height="16px" href={getEthfScanLinkForNft(nft.collectionAddress, nft.tokenId)}>
-              EthfScan
+            <LinkExternal p="0px" height="16px" href={getBNBScanLinkForNft(nft.collectionAddress, nft.tokenId)}>
+              BNBScan
             </LinkExternal>
           </Flex>
         </Flex>

@@ -131,7 +131,7 @@ export default function CurrencyInputPanel({
           </CurrencySelectButton>
         {
           // todo: to check the verified icon logic
-          ['RM','ETHF','FDAO'].includes(currency?.symbol) && <WhiteListIcon/>
+          ['RM','BNB','FDAO'].includes(currency?.symbol) && <WhiteListIcon/>
         }
         </Flex>
         {account && (

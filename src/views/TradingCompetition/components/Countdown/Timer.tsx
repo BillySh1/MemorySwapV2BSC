@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import { Flex, Heading, Text, Link, useTooltip } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
 import { ContextApi } from 'contexts/Localization/types'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 
 export interface TimerProps {
   prefix?: string
@@ -66,8 +66,8 @@ const TooltipContent = ({ blockNumber, t }: { blockNumber: number; t: ContextApi
     <Text color="body" mb="10px" fontWeight="600">
       {t('Block %num%', { num: blockNumber })}
     </Text>
-    <Link external href={getEthfScanLink(blockNumber, 'block')}>
-      {t('View on ETHFScan')}
+    <Link external href={getBNBScanLink(blockNumber, 'block')}>
+      {t('View on BNBScan')}
     </Link>
   </>
 )

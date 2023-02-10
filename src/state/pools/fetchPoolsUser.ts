@@ -9,8 +9,8 @@ import uniq from 'lodash/uniq'
 
 // Pool 0, Cake / Cake is a different kind of contract (master chef)
 // BNB pools use the native BNB token (wrapping ? unwrapping is done at the contract level)
-const nonBnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol !== 'ETHF')
-const bnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol === 'ETHF')
+const nonBnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol !== 'BNB')
+const bnbPools = poolsConfig.filter((pool) => pool.stakingToken.symbol === 'BNB')
 const nonMasterPools = poolsConfig.filter((pool) => pool.sousId !== 0)
 
 export const fetchPoolsAllowance = async (account) => {

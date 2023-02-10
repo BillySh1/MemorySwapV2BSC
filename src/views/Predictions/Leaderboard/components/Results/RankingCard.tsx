@@ -16,7 +16,7 @@ import {
 import { PredictionUser } from 'state/types'
 import { useProfileForAddress } from 'state/profile/hooks'
 import styled from 'styled-components'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import truncateHash from 'utils/truncateHash'
 import { useTranslation } from 'contexts/Localization'
 import WalletStatsModal from '../WalletStatsModal'
@@ -75,8 +75,8 @@ const RankingCard: React.FC<RankingCardProps> = ({ rank, user }) => {
             options={{ placement: 'bottom' }}
           >
             <SubMenuItem onClick={onPresentWalletStatsModal}>{t('View Stats')}</SubMenuItem>
-            <SubMenuItem as={Link} href={getEthfScanLink(user.id, 'address')} bold={false} color="text" external>
-              {t('View on ETHFScan')}
+            <SubMenuItem as={Link} href={getBNBScanLink(user.id, 'address')} bold={false} color="text" external>
+              {t('View on BNBScan')}
             </SubMenuItem>
           </SubMenu>
         </Flex>

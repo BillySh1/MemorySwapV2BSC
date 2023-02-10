@@ -1,7 +1,7 @@
 import { NextLinkFromReactRouter as ReactRouterLink } from 'components/NextLink'
-import { EthfScanIcon, Flex, IconButton, Link, Button, useModal } from '@pancakeswap/uikit'
+import { BNBScanIcon, Flex, IconButton, Link, Button, useModal } from '@pancakeswap/uikit'
 import { useTranslation } from 'contexts/Localization'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import { formatNumber } from 'utils/formatBalance'
 import truncateHash from 'utils/truncateHash'
 import { Achievement, Profile } from 'state/types'
@@ -88,11 +88,11 @@ const ProfileHeader: React.FC<HeaderProps> = ({
               style={{
                 width: 'fit-content',
               }}
-              href={getEthfScanLink(accountPath, 'address') || ''}
+              href={getBNBScanLink(accountPath, 'address') || ''}
               // @ts-ignore
-              alt={t('View EthfScan for user address')}
+              alt={t('View BNBScan for user address')}
             >
-              <EthfScanIcon width="20px" color="primary" />
+              <BNBScanIcon width="20px" color="primary" />
             </IconButton>
           )}
         </Flex>
@@ -157,7 +157,7 @@ const ProfileHeader: React.FC<HeaderProps> = ({
     return (
       <Flex flexDirection="column" mb={[16, null, 0]} mr={[0, null, 16]}>
         {accountPath && profile?.username && (
-          <Link href={getEthfScanLink(accountPath, 'address')} external bold color="primary">
+          <Link href={getBNBScanLink(accountPath, 'address')} external bold color="primary">
             {truncateHash(accountPath)}
           </Link>
         )}

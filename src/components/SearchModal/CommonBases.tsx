@@ -51,7 +51,7 @@ export default function CommonBases({
           disable={selectedCurrency === BNB}
         >
           <CurrencyLogo currency={BNB} style={{ marginRight: 8 }} />
-          <Text>ETHF</Text>
+          <Text>BNB</Text>
         </BaseWrapper>
         {(chainId ? SUGGESTED_BASES[chainId] : []).map((token: Token) => {
           const selected = selectedCurrency instanceof Token && selectedCurrency.address === token.address

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Flex, Link, Text, TimerIcon } from '@pancakeswap/uikit'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import BigNumber from 'bignumber.js'
 import { useTranslation } from 'contexts/Localization'
 import Balance from 'components/Balance'
@@ -37,7 +37,7 @@ const MaxStakeRow: React.FC<MaxStakeRowProps> = ({
       {hasPoolStarted && (
         <Flex justifyContent="space-between" alignItems="center">
           <Text small={small}>{t('Max. stake limit ends in')}:</Text>
-          <Link external href={getEthfScanLink(stakingLimitEndBlock, 'countdown')}>
+          <Link external href={getBNBScanLink(stakingLimitEndBlock, 'countdown')}>
             <Balance
               small={small}
               value={Math.max(stakingLimitEndBlock - currentBlock, 0)}

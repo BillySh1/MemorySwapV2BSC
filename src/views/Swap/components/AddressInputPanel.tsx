@@ -6,7 +6,7 @@ import { useTranslation } from 'contexts/Localization'
 import useActiveWeb3React from '../../../hooks/useActiveWeb3React'
 import { AutoColumn } from '../../../components/Layout/Column'
 import { RowBetween } from '../../../components/Layout/Row'
-import { getEthfScanLink } from '../../../utils'
+import { getBNBScanLink } from '../../../utils'
 
 const InputPanel = styled.div`
   display: flex;
@@ -102,8 +102,8 @@ export default function AddressInputPanel({
             <RowBetween>
               <Text>{t('Recipient')}</Text>
               {address && chainId && (
-                <Link external small href={getEthfScanLink(address, 'address', chainId)}>
-                  ({t('View on ETHFScan')})
+                <Link external small href={getBNBScanLink(address, 'address', chainId)}>
+                  ({t('View on BNBScan')})
                 </Link>
               )}
             </RowBetween>

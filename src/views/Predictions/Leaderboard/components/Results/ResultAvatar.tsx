@@ -1,6 +1,6 @@
 import { Box, Flex, FlexProps, Link, ProfileAvatar, SubMenu, SubMenuItem, useModal, Text } from '@pancakeswap/uikit'
 import styled from 'styled-components'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import { PredictionUser } from 'state/types'
 import { useProfileForAddress } from 'state/profile/hooks'
 import truncateHash from 'utils/truncateHash'
@@ -55,8 +55,8 @@ const ResultAvatar: React.FC<ResultAvatarProps> = ({ user, ...props }) => {
       options={{ placement: 'bottom-start' }}
     >
       <SubMenuItem onClick={onPresentWalletStatsModal}>{t('View Stats')}</SubMenuItem>
-      <SubMenuItem as={Link} href={getEthfScanLink(user.id, 'address')} bold={false} color="text" external>
-        {t('View on ETHFScan')}
+      <SubMenuItem as={Link} href={getBNBScanLink(user.id, 'address')} bold={false} color="text" external>
+        {t('View on BNBScan')}
       </SubMenuItem>
     </SubMenu>
   )

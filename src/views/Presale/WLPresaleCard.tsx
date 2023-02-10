@@ -18,7 +18,7 @@ import { MaxUint256 } from '@ethersproject/constants'
 import { isNumber } from 'lodash'
 import { Button, Input, Flex } from '@pancakeswap/uikit'
 import { BigNumber } from '@ethersproject/bignumber'
-import { useDonateETHF, useDonateRM, useWLDonate } from 'hooks/useContract'
+import { useDonateBNB, useDonateRM, useWLDonate } from 'hooks/useContract'
 
 const Content = styled.div`
   background: #ffffff;
@@ -73,7 +73,7 @@ const DonateButton = styled(Button)`
 
 export default function WLPresaleCard(props) {
   const { type = 0 } = props
-  const tokenName = type == 0 ? 'RM' : 'ETHF'
+  const tokenName = type == 0 ? 'RM' : 'BNB'
 
   const donateContract = useWLDonate()
   const { account } = useWeb3React()
@@ -84,7 +84,7 @@ export default function WLPresaleCard(props) {
   const [isApproved, setIsApproved] = useState(false)
   const { toastSuccess, toastError } = useToast()
 
-  const { data: price } = useSWRContract([donateContract, 'priceETHF'])
+  const { data: price } = useSWRContract([donateContract, 'priceBNB'])
   const { data: raised } = useSWRContract([donateContract, 'poolInfos', [3]])
   const { data: user } = useSWRContract([donateContract, 'getInfo', [account || NOT_ON_SALE_SELLER]])
   const { data: nowPhase } = useSWRContract([donateContract, 'nowPhase'])
@@ -133,7 +133,7 @@ export default function WLPresaleCard(props) {
   }
   const percentage = () => {
     if (raised && price) {
-      const m1 = Number(formatEther(raised.raisedETHF))
+      const m1 = Number(formatEther(raised.raisedBNB))
       const m2 = Number(formatEther(price))
       const m3 = Number(formatEther(raised.totalFdao))
 
@@ -151,11 +151,11 @@ export default function WLPresaleCard(props) {
       <InfoBox>
         <InfoItem>
           <div>Price(W1)</div>
-          <InfoLeft>{price ? (80000 * Number(formatEther(price))).toFixed(6) : 0} ETHF</InfoLeft>
+          <InfoLeft>{price ? (80000 * Number(formatEther(price))).toFixed(6) : 0} BNB</InfoLeft>
         </InfoItem>
         <InfoItem>
           <div>Price(W2)</div>
-          <InfoLeft>{price ? (30000 * Number(formatEther(price))).toFixed(6) : 0} ETHF</InfoLeft>
+          <InfoLeft>{price ? (30000 * Number(formatEther(price))).toFixed(6) : 0} BNB</InfoLeft>
         </InfoItem>
         <InfoItem>
           <div>Total</div>
@@ -164,13 +164,13 @@ export default function WLPresaleCard(props) {
         <InfoItem>
           <div>Rasied</div>
           <InfoLeft style={{ textAlign: 'right' }}>
-            {raised ? Number(formatEther(raised.raisedETHF)).toFixed(2) : 0} ETHF
+            {raised ? Number(formatEther(raised.raisedBNB)).toFixed(2) : 0} BNB
             <br />({100}%)
           </InfoLeft>
         </InfoItem>
         <InfoItem>
           <div>Donated</div>
-          <InfoLeft>{user ? Number(formatEther(user.totalPayAmount)).toFixed(6) : 0} ETHF</InfoLeft>
+          <InfoLeft>{user ? Number(formatEther(user.totalPayAmount)).toFixed(6) : 0} BNB</InfoLeft>
         </InfoItem>
         <InfoItem>
           <div>Claimed(WL1)</div>

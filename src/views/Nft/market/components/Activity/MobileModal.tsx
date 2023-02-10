@@ -7,7 +7,7 @@ import { useTranslation } from 'contexts/Localization'
 import truncateHash from 'utils/truncateHash'
 import { multiplyPriceByAmount } from 'utils/prices'
 import useActiveWeb3React from 'hooks/useActiveWeb3React'
-import { getEthfScanLink } from 'utils'
+import { getBNBScanLink } from 'utils'
 import ActivityEventText from './ActivityEventText'
 import NFTMedia from '../NFTMedia'
 
@@ -100,8 +100,8 @@ const MobileModal: React.FC<MobileModalProps> = ({
           </Flex>
         </LightGreyCard>
         <Flex flexDirection="column" pt="16px" alignItems="center">
-          <Button as={Link} external href={getEthfScanLink(activity.tx, 'transaction', chainId)}>
-            {t('View on ETHFScan')}
+          <Button as={Link} external href={getBNBScanLink(activity.tx, 'transaction', chainId)}>
+            {t('View on BNBScan')}
           </Button>
         </Flex>
       </Flex>
