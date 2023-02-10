@@ -20,7 +20,7 @@ function CardNav({ activeIndex = 0 }: { activeIndex?: number }) {
         <ButtonMenuItem
           id="pool-nav-link"
           as="a"
-          href="https://defi.swft.pro?sourceFlag=memory"
+          href="https://www.bnbchain.org/en/bridge"
           target="_blank"
           rel="noreferrer noopener"
         >

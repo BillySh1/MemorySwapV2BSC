@@ -17,7 +17,7 @@ function Nav({ activeIndex = 0 }: { activeIndex?: number }) {
       <ButtonMenuItem id="pool-nav-link" onClickCapture={() => router.push('liquidity')}>
         {t('Liquidity')}
       </ButtonMenuItem>
-      <ButtonMenuItem id="bridge-nav-link" as="a" href="https://defi.swft.pro?sourceFlag=memory" target={'_blank'}>
+      <ButtonMenuItem id="bridge-nav-link" as="a" href="https://www.bnbchain.org/en/bridge" target={'_blank'}>
         {t('Bridge')}
       </ButtonMenuItem>
     </ButtonMenu>

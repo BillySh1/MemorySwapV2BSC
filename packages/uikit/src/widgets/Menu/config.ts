@@ -18,7 +18,7 @@ export const links = (t: any) => [
       },
       {
         label: t("Bridge"),
-        href: "https://defi.swft.pro?sourceFlag=memory",
+        href: "https://www.bnbchain.org/en/bridge",
       },
     ],
   },
