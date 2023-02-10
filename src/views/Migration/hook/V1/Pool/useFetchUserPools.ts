@@ -23,7 +23,7 @@ const initialData = {
     stakingToken: serializedTokens.cake,
     earningToken: serializedTokens.cake,
     contractAddress: {
-      1818: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
+      97: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
       1819: '0x73feaa1eE314F8c655E354234017bE2193C9E24E',
     },
     poolCategory: PoolCategory.CORE,

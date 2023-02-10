@@ -1,22 +1,22 @@
 export default {
   masterChef: {
     56: '',
-    1818: '',
+    97: '',
   },
   masterChefV1: {
     56: '0x1d32c2945C8FDCBc7156c553B7cEa4325a17f4f9',
-    1818: '',
+    97: '',
   },
   sousChef: {
     56: '0xd3af5fe61dbaf8f73149bfcfa9fb653ff096029a',
-    1818: '',
+    97: '',
   },
   lotteryV2: {
     56: '0x5790c3534F30437641541a0FA04C992799602998',
-    1818: '',
+    97: '',
   },
   multiCall: {
-    56: '0xd325f0cfcf4c84d3769baead5854e33a6878c2ac',
+    56: '0x6F42EaE46385a0F8f60d5eC7320465E50237F7F3',
     97: '',
   },
   pancakeProfile: {
@@ -132,36 +132,12 @@ export default {
     56: '',
     97: '0xeD074DA2A76FD2Ca90C1508930b4FB4420e413B0',
   },
-  xen: {
-    56: '0xcDfd138a8E59916E687F869f5c9D6B6f4334aE73',
-    97: '0xcDfd138a8E59916E687F869f5c9D6B6f4334aE73',
-  },
-  donate: {
-    56: '0x55f39c33613B5AfA63fe1e7B83ca885D21D928A6',
-    97: '0x55f39c33613B5AfA63fe1e7B83ca885D21D928A6',
-  },
-  donate2: {
-    56: '0xa0e201dc02753941be10235AA19e9BBDF39FC337',
-    97: '0xa0e201dc02753941be10235AA19e9BBDF39FC337',
-  },
-  donateRM: {
-    56: '0x905Cb815720A713EB8FA67FBe203fF80a141042d',
-    97: '0x905Cb815720A713EB8FA67FBe203fF80a141042d',
-  },
-  donateETHF: {
-    56: '0x3e7D9Cc802E2b8c7AFc8dd85189F928761f504eE',
-    97: '0x3e7D9Cc802E2b8c7AFc8dd85189F928761f504eE',
-  },
-  WLDonate: {
-    56: '0x305Acc7b382E4E76Ae031e1A1f8641D9D7be864f',
-    97: '0x305Acc7b382E4E76Ae031e1A1f8641D9D7be864f',
-  },
-  rm: {
-    56: '0x93A06C8CE53AF3EE8F7A06200a42BF963b9Dd719',
-    97: '0x93A06C8CE53AF3EE8F7A06200a42BF963b9Dd719',
-  },
-  fdaoCliam: {
-    56: '0xA2f349D0F2571e2F4Cf778cf7D6Dd51deF09f583',
-    97: '0xA2f349D0F2571e2F4Cf778cf7D6Dd51deF09f583',
-  },
+  mdao:{
+    56:'0x7da834F7Be6Ef6fB2Ffcb3DE39018C240bdd5E66',
+    97:''
+  }
+
+ 
+ 
+
 }
