@@ -1,0 +1,1082 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_mdao",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_pair",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "_oracle",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "ticketId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "holder",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "redNumbers",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "blueNumbers",
+        "type": "uint256[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "multiple",
+        "type": "uint256"
+      }
+    ],
+    "name": "NewTicket",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "previousAdminRole",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "newAdminRole",
+        "type": "bytes32"
+      }
+    ],
+    "name": "RoleAdminChanged",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "sender",
+        "type": "address"
+      }
+    ],
+    "name": "RoleRevoked",
+    "type": "event"
+  },
+  {
+    "inputs": [],
+    "name": "CALCULATER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "DRAWER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MDAO",
+    "outputs": [
+      {
+        "internalType": "contract IERC20",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MDAO_USDT_PAIR",
+    "outputs": [
+      {
+        "internalType": "contract IMdaoPair",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "ORACLE",
+    "outputs": [
+      {
+        "internalType": "contract IWitnetRandomness",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "STARTER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ticketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "bingoNumber",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "red",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "blue",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "redNumbers",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "blueNumbers",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "multiple",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "to",
+        "type": "address"
+      }
+    ],
+    "name": "buyTicket",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[5]",
+        "name": "_redNumbers",
+        "type": "uint256[5]"
+      },
+      {
+        "internalType": "uint256[2]",
+        "name": "_blueNumbers",
+        "type": "uint256[2]"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "oneNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "oneReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "threeNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fourNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fiveNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sixNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sevenNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "eightNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nineNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "specialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MemoryLotteryFiveAndTwo.RewardInfo",
+        "name": "_rewardInfo",
+        "type": "tuple"
+      }
+    ],
+    "name": "calculateBonus",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "ticketId",
+        "type": "uint256"
+      }
+    ],
+    "name": "claim",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "draw",
+    "outputs": [],
+    "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "fixedRewardAsU",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "holder",
+        "type": "address"
+      }
+    ],
+    "name": "getHoldTickets",
+    "outputs": [
+      {
+        "components": [
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "periodId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "ticketId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "multiple",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "redNumbers",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "uint256[]",
+                "name": "blueNumbers",
+                "type": "uint256[]"
+              },
+              {
+                "internalType": "address",
+                "name": "holder",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "buyer",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "buyTime",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "claimTime",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MemoryLotteryFiveAndTwo.Ticket",
+            "name": "ticket",
+            "type": "tuple"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bingoRed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bingoBlue",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bonusLevel",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bonus",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MemoryLotteryFiveAndTwo.TicketInfo[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPeriod",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "periodId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "saleOpenTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "saleCloseTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "claimBonusTime",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "salesAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256[5]",
+            "name": "redNumbers",
+            "type": "uint256[5]"
+          },
+          {
+            "internalType": "uint256[2]",
+            "name": "blueNumbers",
+            "type": "uint256[2]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "periodLastTicketId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bool",
+            "name": "isDrawed",
+            "type": "bool"
+          },
+          {
+            "internalType": "bool",
+            "name": "isCaculated",
+            "type": "bool"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "oneNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "oneReward",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "twoNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "twoReward",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "threeNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "fourNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "fiveNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "sixNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "sevenNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "eightNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "nineNumber",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "specialNumber",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct MemoryLotteryFiveAndTwo.RewardInfo",
+            "name": "rewardInfo",
+            "type": "tuple"
+          }
+        ],
+        "internalType": "struct MemoryLotteryFiveAndTwo.Period",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPeriodPool",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getPeriodRewardInfo",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "oneNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "oneReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "threeNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fourNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fiveNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sixNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sevenNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "eightNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nineNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "specialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MemoryLotteryFiveAndTwo.RewardInfo",
+        "name": "",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getRoleAdmin",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getTicketPrice",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "grantRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "hasRole",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "nowPeriod",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "periodRandomizingBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "name": "periods",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "saleOpenTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "saleCloseTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "claimBonusTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "salesAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "periodLastTicketId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "isDrawed",
+        "type": "bool"
+      },
+      {
+        "internalType": "bool",
+        "name": "isCaculated",
+        "type": "bool"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "oneNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "oneReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "twoReward",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "threeNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fourNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "fiveNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sixNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "sevenNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "eightNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "nineNumber",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "specialNumber",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct MemoryLotteryFiveAndTwo.RewardInfo",
+        "name": "rewardInfo",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "role",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "revokeRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "saleOpenTime",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "saleCloseTime",
+        "type": "uint256"
+      }
+    ],
+    "name": "startNewPeriod",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes4",
+        "name": "interfaceId",
+        "type": "bytes4"
+      }
+    ],
+    "name": "supportsInterface",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "periodId",
+        "type": "uint256"
+      }
+    ],
+    "name": "viewRandom",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "stateMutability": "payable",
+    "type": "receive"
+  }
+]

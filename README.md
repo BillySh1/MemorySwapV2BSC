@@ -1,4 +1,4 @@
-# 🥞 Pancake Frontend
+# MemorySwap Frontend
 
 This project contains the main features of the pancake application.
 
@@ -30,4 +30,4 @@ yarn build
 # start the application after build
 yarn start
 ```
-# MemorySwapV2BSC
+

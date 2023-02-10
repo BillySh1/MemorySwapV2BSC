@@ -1,0 +1,126 @@
+{
+  "name": "PancakeSwap Default List",
+  "timestamp": "2022-01-26T11:45:09Z",
+  "version": {
+    "major": 4,
+    "minor": 0,
+    "patch": 0
+  },
+  "tags": {},
+  "logoURI": "https://www.gate.io/images/coin_icon/64/ethf.png",
+  "keywords": ["memory", "default"],
+  "tokens": [
+    {
+      "name": "ETHF DAO",
+      "symbol": "FDAO",
+      "address": "0x3bdB1dD1eB0034D231B3e62fA0D98f1e4bf53AdD",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://ethf.mdaoswap.com/FDAO.png"
+    },
+    {
+      "name": "RICHMOON",
+      "symbol": "RM",
+      "address": "0x93A06C8CE53AF3EE8F7A06200a42BF963b9Dd719",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://ethf.mdaoswap.com/rmn.jpg"
+    },
+    {
+      "name": "Wrapped Ethereum",
+      "symbol": "WETHF",
+      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/ethf.png"
+    },
+    {
+      "name": "FREN Crypto",
+      "symbol": "FREN",
+      "address": "0x7127deeff734cE589beaD9C4edEFFc39C9128771",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://ethf.mdaoswap.com/fren.jpg"
+    },
+    {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "address": "0x3eee5d2ed0205f93969a59f7c8597fb614264436",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/eth.png"
+    },
+    {
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "address": "0x5014cfd635bc53d6df109dc7803d7f872ee44696",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/btc.png"
+    },
+    {
+      "name": "Tether USDT",
+      "symbol": "USDT",
+      "address": "0x7bf88d2c0e32de92cdaf2d43ccdc23e8edfd5990",
+      "chainId": 513100,
+      "decimals": 6,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/usdt.png"
+    },
+    {
+      "name": "USD Coin",
+      "symbol": "USDC",
+      "address": "0xba1458971f73c4b730a1f09d29713619cda793cf",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/usdc.png"
+    },
+    {
+      "name": "HuobiToken",
+      "symbol": "HT",
+      "address": "0x961c2a34c5f13e6c78fba29fb57221b394246d5e",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/ht.png"
+    },
+    {
+      "name": "Shiba Inu",
+      "symbol": "SHIB",
+      "address": "0xbd1563046a90f18127fd39f3481fd8d6ab22877f",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/shib.png"
+    },
+    {
+      "name": "Ethereum Classic",
+      "symbol": "ETC",
+      "address": "0x98422ff55f098f37351f2c780da0f3ca0172f118",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/etc.png"
+    },
+    {
+      "name": "EthereumPow",
+      "symbol": "ETHW",
+      "address": "0x0c9f28fbdfd79f7c00b805d8c63d053c146d282c",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/ethw.png"
+    },
+    {
+      "name": "Tether USDT (ETHF)",
+      "symbol": "USDT(ETHF)",
+      "address": "0xe4A06C100Ab5cA5A306FcE7D64f433e308E4ab14",
+      "chainId": 513100,
+      "decimals": 18,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/usdt.png"
+    },
+    {
+      "name": "Doge Coin",
+      "symbol": "DOGE",
+      "address": "0x16c82b59a784c96d43081bb7ad576f5ce6f222ed",
+      "chainId": 513100,
+      "decimals": 8,
+      "logoURI": "https://www.gate.io/images/coin_icon/64/doge.png"
+    }
+  ]
+}
