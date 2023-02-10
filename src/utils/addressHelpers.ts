@@ -112,30 +112,5 @@ export const getFivePlusTwoAddress = () => {
   return getAddress(addresses.fiveplustwo)
 }
 
-export const getXENAddress = () => {
-  return getAddress(addresses.xen)
-}
 
-export const getFDAOClaimAddress = () => {
-  return getAddress(addresses.fdaoCliam)
-}
-
-export const getDonateAddress = ()=>{
-  return getAddress(addresses.donate)
-}
-
-export const getDonate2Address = ()=>{
-  return getAddress(addresses.donate2)
-}
-
-export const getDonateRMAddress = ()=>{
-  return getAddress(addresses.donateRM)
-}
-export const getDonateBNBAddress = ()=>{
-  return getAddress(addresses.donateBNB)
-}
-
-export const getWLDonateFAddress = ()=>{
-  return getAddress(addresses.WLDonate)
-}
 

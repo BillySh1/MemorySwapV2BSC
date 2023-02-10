@@ -38,14 +38,6 @@ import {
   getGalaxyNFTClaimingAddress,
   getFactoryAddress,
   getTimeLockerAddress,
-  getFivePlusTwoAddress,
-  getXENAddress,
-  getDonateAddress,
-  getDonate2Address,
-  getDonateRMAddress,
-  getDonateBNBAddress,
-  getWLDonateFAddress,
-  getFDAOClaimAddress,
 } from 'utils/addressHelpers'
 
 // ABI
@@ -266,38 +258,6 @@ export const getTimeLockerContract = (signer?: Signer | Provider) => {
   return getContract(timeLockerAbi, getTimeLockerAddress(), signer) as any
 }
 
-export const getFivePlusTwoContract = (signer?: Signer | Provider) => {
-  return getContract(fivePlusTwoAbi, getFivePlusTwoAddress(), signer) as any
-}
 
-export const getXenContract = (signer?: Signer | Provider) => {
-  return getContract(xenAbi, getXENAddress(), signer) as any
-}
-export const getFDAOClaimContract = (signer?: Signer | Provider) => {
-  return getContract(fdaoclaimAbi, getFDAOClaimAddress(), signer) as any
-}
-
-export const getDonateContract = (signer?: Signer | Provider) => {
-  return getContract(donateAbi, getDonateAddress(), signer) as any
-}
-
-
-export const getDonate2Contract = (signer?: Signer | Provider) => {
-  return getContract(donateAbi, getDonate2Address(), signer) as any
-}
-
-export const getDonateRMContract = (signer?: Signer | Provider) => {
-  return getContract(donateAbi, getDonateRMAddress(), signer) as any
-}
-
-export const getDonateBNBContract = (signer?: Signer | Provider) => {
-  return getContract(donateAbi, getDonateBNBAddress(), signer) as any
-}
-
-
-
-export const getWLDonateContract = (signer?: Signer | Provider) => {
-  return getContract(wlDonateAbi, getWLDonateFAddress(), signer) as any
-}
 
 

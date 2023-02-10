@@ -54,14 +54,14 @@ const stepsConfigBuilder = ({ t, userInfos, eventInfos, userStatus, account, the
       bodyText: [t('Each NFT costs CAKE to mint. Remember you also need BNB to cover transaction fees too!')],
       buttons: (
         <>
-          <Button
+          {/* <Button
             as="a"
             href="https://pancakeswap.finance/swap?outputCurrency=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82"
             target="_blank"
             width="100%"
           >
             {t('Buy CAKE')}
-          </Button>
+          </Button> */}
         </>
       ),
     },

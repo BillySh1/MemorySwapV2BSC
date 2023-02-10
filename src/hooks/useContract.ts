@@ -37,16 +37,8 @@ import {
   getFactoryContract,
   getTimeLockerContract,
   getMDAOContract,
-  getFivePlusTwoContract,
-  getXenContract,
-  getDonateContract,
-  getDonate2Contract,
-  getDonateRMContract,
-  getDonateBNBContract,
-  getWLDonateContract,
-  getFDAOClaimContract,
 } from 'utils/contractHelpers'
-import { getMulticallAddress, getXENAddress } from 'utils/addressHelpers'
+import { getMulticallAddress } from 'utils/addressHelpers'
 import { Erc20, Erc20Bytes32, Multicall, Weth, Cake, Erc721collection, CakeVaultV2 } from 'config/abi/types'
 
 // Imports below migrated from Exchange useContract.ts
@@ -266,41 +258,6 @@ export const useTimeLocker = () => {
   const { library } = useActiveWeb3React()
   return useMemo(() => getTimeLockerContract(library.getSigner()), [library])
 }
-export const useFivePlusTwo = () => {
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getFivePlusTwoContract(library.getSigner()), [library])
-}
-
-export const useXen = ()=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getXenContract(library.getSigner()), [library])
-}
-export const useFDAOClaim = ()=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getFDAOClaimContract(library.getSigner()), [library])
-}
-
-export const useDonate = (type)=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getDonateContract(library.getSigner()), [library, type])
-}
-export const useDonate2 = (type)=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getDonate2Contract(library.getSigner()), [library, type])
-} 
-export const useDonateRM = (type)=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getDonateRMContract(library.getSigner()), [library, type])
-} 
-export const useDonateBNB = (type)=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getDonateBNBContract(library.getSigner()), [library, type])
-} 
-
-export const useWLDonate = ()=>{
-  const { library } = useActiveWeb3React()
-  return useMemo(() => getWLDonateContract(library.getSigner()), [library])
-} 
 
 export const useGalaxyNFTClaimingContract = () => {
   const { library } = useActiveWeb3React()

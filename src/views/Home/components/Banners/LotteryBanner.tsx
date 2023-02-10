@@ -10,10 +10,6 @@ import { LotteryResponse } from 'state/types'
 import styled from 'styled-components'
 import useSWR from 'swr'
 import { getBalanceNumber } from 'utils/formatBalance'
-import getTimePeriods from 'utils/getTimePeriods'
-import Timer from 'views/Lottery/components/Countdown/Timer'
-import useGetNextLotteryEvent from 'views/Lottery/hooks/useGetNextLotteryEvent'
-import useNextEventCountdown from './hooks/useNextEventCountdown'
 import { lotteryImage, lotteryMobileImage } from './images'
 import * as S from './Styled'
 
@@ -87,12 +83,8 @@ const LotteryPrice: React.FC = () => {
 const LotteryCountDownTimer = () => {
   const { data } = useSWR<LotteryResponse>(['currentLottery'])
   const endTimeAsInt = parseInt(data.endTime, 10)
-  const { nextEventTime } = useGetNextLotteryEvent(endTimeAsInt, data.status)
-  const secondsRemaining = useNextEventCountdown(nextEventTime)
-  const { days, hours, minutes, seconds } = getTimePeriods(secondsRemaining)
-  if (isLotteryLive(data.status))
-    return <Timer wrapperClassName="custom-timer" seconds={seconds} minutes={minutes} hours={hours} days={days} />
-  return null
+  // const { days, hours, minutes, seconds } = getTimePeriods(secondsRemaining)
+
 }
 
 const LotteryBanner = () => {
@@ -110,7 +102,7 @@ const LotteryBanner = () => {
                 <LotteryPrice />
               </StyledSubheading>
               <TimerWrapper>
-                <LotteryCountDownTimer />
+                {/* <LotteryCountDownTimer /> */}
               </TimerWrapper>
             </>
           ) : (
