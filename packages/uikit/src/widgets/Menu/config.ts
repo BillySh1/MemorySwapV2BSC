@@ -27,16 +27,16 @@ export const links = (t: any) => [
     icon: "IfoIcon",
     href: "/fdaoex",
   },
-  {
-    label: t("Refund"),
-    icon: "PoolIcon",
-    href: "/refund",
-  },
-  {
-    label: t("Presale"),
-    icon: "FarmIcon",
-    href: "/presale",
-  },
+  // {
+  //   label: t("Refund"),
+  //   icon: "PoolIcon",
+  //   href: "/refund",
+  // },
+  // {
+  //   label: t("Presale"),
+  //   icon: "FarmIcon",
+  //   href: "/presale",
+  // },
   {
     label: t("TimeLock"),
     icon: "TicketIcon",
@@ -105,14 +105,6 @@ export const links = (t: any) => [
     icon: "MoreIcon",
     items: [
       {
-        label: t("FREN"),
-        href: "/fren",
-      },
-      {
-        label: t("Github"),
-        href: "/github",
-      },
-      {
         label: t("Docs"),
         href: "https://docs.memorylabs.cloud",
       },
@@ -127,7 +119,7 @@ export const socials = [
     items: [
       {
         label: "English",
-        href: "https://t.me/Memory_Swap",
+        href: "https://t.me/MemorySwap_EN",
       },
       {
         label: "简体中文",

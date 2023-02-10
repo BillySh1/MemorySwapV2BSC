@@ -98,7 +98,7 @@ export default function CommonPresaleCard(props) {
   }
 
   const approve = async () => {
-    const rmC = addresses.rm[513100]
+    const rmC = addresses.rm[56]
     const isValidAddress = isAddress(rmC) !== false
     if (!isValidAddress) {
       toastError('not valid address')

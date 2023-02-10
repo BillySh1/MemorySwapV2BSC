@@ -1,7 +1,7 @@
-import { Currency, ETHER, Token } from '@pancakeswap/sdk'
+import { Currency, BNB, Token } from '@pancakeswap/sdk'
 
 export function currencyId(currency: Currency): string {
-  if (currency === ETHER) return 'ETHF'
+  if (currency === BNB) return 'ETHF'
   if (currency instanceof Token) return currency.address
   throw new Error('invalid currency')
 }

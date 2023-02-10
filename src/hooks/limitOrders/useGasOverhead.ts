@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { formatUnits } from '@ethersproject/units'
-import { CurrencyAmount, Price, Token, TokenAmount, JSBI, ETHER } from '@pancakeswap/sdk'
+import { CurrencyAmount, Price, Token, TokenAmount, JSBI, BNB } from '@pancakeswap/sdk'
 import { BigNumber } from '@ethersproject/bignumber'
 import { useTradeExactIn } from 'hooks/Trades'
 import tryParseAmount from 'utils/tryParseAmount'
@@ -23,7 +23,7 @@ export default function useGasOverhead(
 
   const gasPrice = getGasPrice()
   const requiredGas = formatUnits(gasPrice ? BigNumber.from(gasPrice).mul(GENERIC_GAS_LIMIT_ORDER_EXECUTION) : '0')
-  const requiredGasAsCurrencyAmount = tryParseAmount(requiredGas, ETHER)
+  const requiredGasAsCurrencyAmount = tryParseAmount(requiredGas, BNB)
 
   const inputIsBNB = inputAmount?.currency.symbol === 'BNB'
 

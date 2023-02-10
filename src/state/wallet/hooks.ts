@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, ETHER, JSBI, Token, TokenAmount } from '@pancakeswap/sdk'
+import { Currency, CurrencyAmount, BNB, JSBI, Token, TokenAmount } from '@pancakeswap/sdk'
 import { useMemo } from 'react'
 import { useWeb3React } from '@web3-react/core'
 import ERC20_INTERFACE from 'config/abi/erc20'
@@ -105,7 +105,7 @@ export function useCurrencyBalances(
   )
 
   const tokenBalances = useTokenBalances(account, tokens)
-  const containsBNB: boolean = useMemo(() => currencies?.some((currency) => currency === ETHER) ?? false, [currencies])
+  const containsBNB: boolean = useMemo(() => currencies?.some((currency) => currency === BNB) ?? false, [currencies])
   const bnbBalance = useBNBBalances(containsBNB ? [account] : [])
 
   return useMemo(
@@ -113,7 +113,7 @@ export function useCurrencyBalances(
       currencies?.map((currency) => {
         if (!account || !currency) return undefined
         if (currency instanceof Token) return tokenBalances[currency.address]
-        if (currency === ETHER) return bnbBalance[account]
+        if (currency === BNB) return bnbBalance[account]
         return undefined
       }) ?? [],
     [account, currencies, bnbBalance, tokenBalances],

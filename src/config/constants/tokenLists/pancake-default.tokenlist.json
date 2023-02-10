@@ -7,120 +7,120 @@
     "patch": 0
   },
   "tags": {},
-  "logoURI": "https://www.gate.io/images/coin_icon/64/ethf.png",
+  "logoURI": "",
   "keywords": ["memory", "default"],
   "tokens": [
     {
-      "name": "ETHF DAO",
-      "symbol": "FDAO",
-      "address": "0x3bdB1dD1eB0034D231B3e62fA0D98f1e4bf53AdD",
-      "chainId": 513100,
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://ethf.mdaoswap.com/FDAO.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
     },
     {
-      "name": "RICHMOON",
-      "symbol": "RM",
-      "address": "0x93A06C8CE53AF3EE8F7A06200a42BF963b9Dd719",
-      "chainId": 513100,
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://ethf.mdaoswap.com/rmn.jpg"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
     },
     {
-      "name": "Wrapped Ethereum",
-      "symbol": "WETHF",
-      "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-      "chainId": 513100,
-      "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/ethf.png"
-    },
-    {
-      "name": "FREN Crypto",
-      "symbol": "FREN",
-      "address": "0x7127deeff734cE589beaD9C4edEFFc39C9128771",
-      "chainId": 513100,
-      "decimals": 18,
-      "logoURI": "https://ethf.mdaoswap.com/fren.jpg"
-    },
-    {
-      "name": "Ethereum",
+      "name": "Ethereum Token",
       "symbol": "ETH",
-      "address": "0x3eee5d2ed0205f93969a59f7c8597fb614264436",
-      "chainId": 513100,
+      "address": "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/eth.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png"
     },
     {
-      "name": "Bitcoin",
-      "symbol": "BTC",
-      "address": "0x5014cfd635bc53d6df109dc7803d7f872ee44696",
-      "chainId": 513100,
+      "name": "BTCB Token",
+      "symbol": "BTCB",
+      "address": "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/btc.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/wbtc.png"
     },
     {
-      "name": "Tether USDT",
+      "name": "Tether USD",
       "symbol": "USDT",
-      "address": "0x7bf88d2c0e32de92cdaf2d43ccdc23e8edfd5990",
-      "chainId": 513100,
-      "decimals": 6,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/usdt.png"
-    },
-    {
-      "name": "USD Coin",
-      "symbol": "USDC",
-      "address": "0xba1458971f73c4b730a1f09d29713619cda793cf",
-      "chainId": 513100,
+      "address": "0x55d398326f99059fF775485246999027B3197955",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/usdc.png"
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/usdt.png"
     },
     {
-      "name": "HuobiToken",
-      "symbol": "HT",
-      "address": "0x961c2a34c5f13e6c78fba29fb57221b394246d5e",
-      "chainId": 513100,
+      "name": "Venus",
+      "symbol": "XVS",
+      "address": "0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/ht.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0xcF6BB5389c92Bdda8a3747Ddb454cB7a64626C63.png"
     },
     {
-      "name": "Shiba Inu",
-      "symbol": "SHIB",
-      "address": "0xbd1563046a90f18127fd39f3481fd8d6ab22877f",
-      "chainId": 513100,
+      "name": "VAI Stablecoin",
+      "symbol": "VAI",
+      "address": "0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/shib.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x4BD17003473389A42DAF6a0a729f6Fdb328BbBd7.png"
     },
     {
-      "name": "Ethereum Classic",
-      "symbol": "ETC",
-      "address": "0x98422ff55f098f37351f2c780da0f3ca0172f118",
-      "chainId": 513100,
+      "name": "Alpaca",
+      "symbol": "ALPACA",
+      "address": "0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/etc.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x8F0528cE5eF7B51152A59745bEfDD91D97091d2F.png"
     },
     {
-      "name": "EthereumPow",
-      "symbol": "ETHW",
-      "address": "0x0c9f28fbdfd79f7c00b805d8c63d053c146d282c",
-      "chainId": 513100,
+      "name": "Belt",
+      "symbol": "BELT",
+      "address": "0xE0e514c71282b6f4e823703a39374Cf58dc3eA4f",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/ethw.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0xE0e514c71282b6f4e823703a39374Cf58dc3eA4f.png"
     },
     {
-      "name": "Tether USDT (ETHF)",
-      "symbol": "USDT(ETHF)",
-      "address": "0xe4A06C100Ab5cA5A306FcE7D64f433e308E4ab14",
-      "chainId": 513100,
+      "name": "TokoCrypto",
+      "symbol": "TKO",
+      "address": "0x9f589e3eabe42ebC94A44727b3f3531C0c877809",
+      "chainId": 56,
       "decimals": 18,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/usdt.png"
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x9f589e3eabe42ebC94A44727b3f3531C0c877809.png"
     },
     {
-      "name": "Doge Coin",
-      "symbol": "DOGE",
-      "address": "0x16c82b59a784c96d43081bb7ad576f5ce6f222ed",
-      "chainId": 513100,
-      "decimals": 8,
-      "logoURI": "https://www.gate.io/images/coin_icon/64/doge.png"
+      "name": "Nerve Finance",
+      "symbol": "NRV",
+      "address": "0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://pancakeswap.finance/images/tokens/0x42F6f551ae042cBe50C739158b4f0CAC0Edb9096.png"
+    },
+    {
+      "name": "Ellipsis",
+      "symbol": "EPS",
+      "address": "0xA7f552078dcC247C2684336020c03648500C6d9F",
+      "chainId": 56,
+      "decimals": 18,
+      "logoURI": "https://pancakeswap.finance/images/tokens/0xA7f552078dcC247C2684336020c03648500C6d9F.png"
+    },
+    {
+      "name": "BUSD Token",
+      "symbol": "BUSD",
+      "address": "0xaB1a4d4f1D656d2450692D237fdD6C7f9146e814",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/busd.png"
+    },
+    {
+      "name": "Wrapped BNB",
+      "symbol": "WBNB",
+      "address": "0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd",
+      "chainId": 97,
+      "decimals": 18,
+      "logoURI": "https://tokens.pancakeswap.finance/images/symbol/bnb.png"
     }
   ]
 }
