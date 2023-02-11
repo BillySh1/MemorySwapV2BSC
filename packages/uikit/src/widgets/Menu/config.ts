@@ -22,11 +22,7 @@ export const links = (t: any) => [
       },
     ],
   },
-  {
-    label: t("Exchange"),
-    icon: "IfoIcon",
-    href: "/fdaoex",
-  },
+ 
   // {
   //   label: t("Refund"),
   //   icon: "PoolIcon",
@@ -55,23 +51,23 @@ export const links = (t: any) => [
     items: [
       {
         label: t("Market"),
-        href: "/market",
+        href: "/soon",
       },
       {
         label: t("BlindBox"),
-        href: "/blind",
+        href: "/soon",
       },
     ],
   },
   {
     label: t("DAO"),
     icon: "NftIcon",
-    href: "/dao",
+    href: "/soon",
   },
   {
     label: t("GameFi"),
     icon: "GameFiIcon",
-    href: "/gamefi",
+    href: "/soon",
   },
   // {
   //   label: t("IDO"),
